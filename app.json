@@ -1,0 +1,12 @@
+{
+  "name": "newsOnRailsMobile2020",
+  "displayName": "newsOnRailsMobile2020",
+  "expo": {
+    "name": "newsOnRailsMobile2020",
+    "slug": "newsOnRailsMobile2020",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
