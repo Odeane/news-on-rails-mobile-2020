@@ -1,16 +1,23 @@
 import React from 'react'
-import { StyleSheet, View, Text, Button } from 'react-native'
+import { StyleSheet, View, FlatList, Text } from 'react-native'
 import { useSelector } from 'react-redux'
 
-const ArticlesIndex = (props) => {
-  const appName = useSelector(state => state.appName)
+
+const ArticlesIndex = () => {
+  const articles = useSelector(state => state.articles.articles)
+
 
   return (
     <View style={styles.container}>
-      <Text>Welcome to {appName}</Text>
-      <Button
-        title="Click Me"
-        onPress={() => props.navigation.navigate('AboutUs')} />
+      <FlatList
+        data={articles}
+        keyExtractor={article => article.id.toString()}
+        renderItem={({ item }) => {
+          return (
+            <Text>{item.title}</Text>
+          )
+        }}
+      />
     </View>
   )
 }

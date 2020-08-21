@@ -6,6 +6,7 @@ import App from './App';
 
 const ApplicationWrapper = () => {
   const store = configureStore()
+  window.globalStore = store
   return (
     <Provider store={store}>
       <App />

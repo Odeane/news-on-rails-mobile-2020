@@ -1,6 +1,7 @@
 import React from 'react';
 import ArticlesIndex from './src/components/ArticlesIndex'
 import AboutUs from './src/components/AboutUs'
+import HeaderButtons from './src/components/HeaderButtons'
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -13,13 +14,13 @@ const App = () => {
         <Stack.Screen
           name='ArticlesIndex'
           component={ArticlesIndex}
-          options={
-            () => ({
-              headerStyle: {
-                backgroundColor: 'grey'
-              },
-              title: "Custom title"
-            })
+          options={(props) => ({
+            headerStyle: {
+              backgroundColor: 'lightgrey'
+            },
+            title: "Current news",
+            headerRight: () => <HeaderButtons {...props} />
+          })
           }
         />
         <Stack.Screen
