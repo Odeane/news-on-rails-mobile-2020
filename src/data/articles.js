@@ -6,7 +6,7 @@ const dummyArticles = {
       "lead": "Lord of all coharts",
       "category": "lifestyle",
       "premium": true,
-      "image": "https://i.imgur.com/t0MRiAf.png"
+      "image": "https://picsum.photos/800"
     },
     {
       "id": 2,
@@ -14,7 +14,7 @@ const dummyArticles = {
       "lead": "Happy campers is always a winner",
       "category": "sports",
       "premium": false,
-      "image": "https://i.imgur.com/t0MRiAf.png"
+      "image": "https://picsum.photos/800"
     },
     {
       "id": 3,
@@ -22,7 +22,7 @@ const dummyArticles = {
       "lead": "A good scrum lord will lead us to a bright future.",
       "category": "economy",
       "premium": false,
-      "image": "https://i.imgur.com/t0MRiAf.png"
+      "image": "https://picsum.photos/800"
     },
     {
       "id": 4,
@@ -30,7 +30,7 @@ const dummyArticles = {
       "lead": "A good scrum lord will lead us to a bright future.",
       "category": "economy",
       "premium": true,
-      "image": "https://i.imgur.com/t0MRiAf.png"
+      "image": "https://picsum.photos/800"
     },
     {
       "id": 5,
@@ -38,7 +38,7 @@ const dummyArticles = {
       "lead": "A good scrum lord will lead us to a bright future.",
       "category": "economy",
       "premium": true,
-      "image": "https://i.imgur.com/t0MRiAf.png"
+      "image": "https://picsum.photos/800"
     }
   ]
 }

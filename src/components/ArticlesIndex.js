@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyleSheet, View, FlatList, Text } from 'react-native'
 import { useSelector } from 'react-redux'
+import ListItem from './ListItem'
 
 
 const ArticlesIndex = () => {
@@ -14,7 +15,7 @@ const ArticlesIndex = () => {
         keyExtractor={article => article.id.toString()}
         renderItem={({ item }) => {
           return (
-            <Text>{item.title}</Text>
+            <ListItem {...item}/>
           )
         }}
       />
