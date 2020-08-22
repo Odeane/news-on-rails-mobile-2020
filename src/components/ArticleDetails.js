@@ -3,14 +3,15 @@ import { View, Text, StyleSheet, Dimensions, Image } from 'react-native'
 import { Paragraph, Title } from 'react-native-paper';
 const ArticleDetails = props => {
   const item = props.route.params.item
-  const { image, title, lead } = item
+  const { image, title, lead, content, id } = item
 
   return (
-    <View style={styles.container}>
+    <View id={`article-${id}`} style={styles.container}>
       <Image style={styles.image} source={{ uri: image }} />
       <View style={styles.contentContainer}>
         <Title style={styles.title}>{title}</Title>
         <Paragraph style={styles.subtitle}>{lead}</Paragraph>
+        <Paragraph style={styles.subtitle}>{content}</Paragraph>
       </View>
     </View>
   )
