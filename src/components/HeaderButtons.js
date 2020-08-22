@@ -8,7 +8,7 @@ const HeaderButtons = ({ navigation }) => {
     <View style={[styles.iconContainer, { flexDirection: 'row' }]}>
       <TouchableHighlight
         onPress={() => { navigation.navigate({ name: 'AboutUs' }) }}>
-        <Ionicons name="md-heart-empty" size={28} color="white" />
+        <Ionicons name="md-information-circle-outline" size={28} color="grey" />
       </TouchableHighlight>
     </View>
   )

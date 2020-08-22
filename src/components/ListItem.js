@@ -8,13 +8,12 @@ import {
   Dimensions
 } from "react-native";
 
-const ListItem = item => {
+const ListItem = ({ item, navigation }) => {
   const { image, title, lead } = item;
-
   return (
     <View style={styles.container}>
       <TouchableOpacity
-      // onPress={() => removeItem(key)}
+        onPress={() => navigation.navigate('ArticleDetails', { item: item })}
       >
         <Image style={styles.image} source={{ uri: image }} />
         <View style={styles.card}>
@@ -36,10 +35,11 @@ const styles = StyleSheet.create({
   card: {
     position: "absolute",
     width: Dimensions.get('window').width,
-    padding: 7,
+    paddingTop: 8,
     paddingLeft: 10,
     paddingRight: 8,
-    bottom: 8,
+    paddingBottom: 16,
+    top: 8,
     backgroundColor: "rgba(0,0,0,0.3)"
   },
   title: {
@@ -53,6 +53,6 @@ const styles = StyleSheet.create({
   image: {
     height: 250,
     width: Dimensions.get('window').width,
-    marginBottom: 15
+    marginBottom: 5
   },
 });
