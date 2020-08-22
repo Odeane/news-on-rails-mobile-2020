@@ -1,4 +1,6 @@
 import React from "react";
+
+
 import {
   View,
   StyleSheet,
@@ -10,6 +12,9 @@ import {
 
 const ListItem = ({ item, navigation }) => {
   const { image, title, lead } = item;
+
+  
+
   return (
     <View style={styles.container}>
       <TouchableOpacity

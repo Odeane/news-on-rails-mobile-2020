@@ -9,27 +9,17 @@ describe("Vistors can see list of Articles", () => {
     cy.visit("/");
   });
   it("Visitors can see article one", () => {
-    cy.get("#article-1").within(() => {
-      cy.get("#title").should("contain", "Scrum Lord");
-      cy.get("#lead").should("contain", "Lord of all coharts");
-    });
+    cy.contains('Scrum Lord thy God').should('be.visible')
+    cy.contains('Lord of all coharts').should('be.visible')
   });
 
   it("Visitors can see list article two", () => {
-    cy.get("#article-2").within(() => {
-      cy.get("#title").should("contain", "Happy Campers");
-      cy.get("#lead").should("contain", "Happy campers is always a winner");
-    });
+    cy.contains('Happy Campers').should('be.visible')
+    cy.contains('Happy campers is always a winner').should('be.visible')
   });
 
   it("Visitors can see list article three", () => {
-    cy.get("#article-4").within(() => {
-      cy.get("#title").should("contain", "Bright Future");
-      cy.get("#lead").should(
-        "contain",
-        "A good scrum lord will lead us to a bright future."
-      );
-      cy.get("button").should("contain", "Read more").click();
-    });
+    cy.contains('Bright Future').should('be.visible')
+    cy.contains('A good scrum lord will lead us to a bright future.').should('be.visible')
   });
 });

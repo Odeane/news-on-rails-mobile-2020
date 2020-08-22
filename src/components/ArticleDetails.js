@@ -6,7 +6,7 @@ const ArticleDetails = props => {
   const { image, title, lead, content, id } = item
 
   return (
-    <View id={`article-${id}`} style={styles.container}>
+    <View  style={styles.container}>
       <Image style={styles.image} source={{ uri: image }} />
       <View style={styles.contentContainer}>
         <Title style={styles.title}>{title}</Title>

@@ -4,6 +4,15 @@ import { Provider as PaperProvider } from 'react-native-paper';
 import configureStore from './src/state/store/configureStore'
 import registerRootComponent from 'expo/build/launch/registerRootComponent';
 import App from './App';
+import axios from 'axios'
+
+let apiUrl;
+if (process.env.NODE_ENV === "production") {
+  apiUrl = "https://news-on-rails-api.herokuapp.com/api/v1";
+} else {
+  apiUrl = "http://localhost:3000/api/v1";
+}
+axios.defaults.baseURL = apiUrl;
 
 const ApplicationWrapper = () => {
   const store = configureStore()
