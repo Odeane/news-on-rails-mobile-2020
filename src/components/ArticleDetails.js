@@ -5,6 +5,7 @@ const ArticleDetails = props => {
   const item = props.route.params.item
   const { image, title, lead, content, id } = item
 
+
   return (
     <View  style={styles.container}>
       <Image style={styles.image} source={{ uri: image }} />

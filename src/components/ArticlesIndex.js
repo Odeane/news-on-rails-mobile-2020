@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import { StyleSheet, View, FlatList } from 'react-native'
-import { useSelector} from 'react-redux'
 import ListItem from './ListItem'
 import axios from 'axios'
 
@@ -15,7 +14,7 @@ const ArticlesIndex = ({navigation}) => {
   const getArticles = async () => {
     let response = await axios.get(`http://localhost:3000/api/v1/articles`)
     setArticlesList(response.data.articles)
-    console.log(articlesList)
+    console.log(response)
   }
 
   return (
