@@ -14,7 +14,6 @@ const ArticlesIndex = ({navigation}) => {
   const getArticles = async () => {
     let response = await axios.get(`http://localhost:3000/api/v1/articles`)
     setArticlesList(response.data.articles)
-    console.log(response)
   }
 
   return (

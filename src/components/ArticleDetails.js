@@ -1,10 +1,9 @@
 import React from 'react'
-import { View, Text, StyleSheet, Dimensions, Image } from 'react-native'
+import { View, StyleSheet, Dimensions, Image } from 'react-native'
 import { Paragraph, Title } from 'react-native-paper';
 const ArticleDetails = props => {
   const item = props.route.params.item
-  const { image, title, lead, content, id } = item
-
+  const { image, title, lead, content} = item
 
   return (
     <View  style={styles.container}>
